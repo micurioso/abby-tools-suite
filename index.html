@@ -3,285 +3,111 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy — Abby Tools Suite</title>
+  <title>Abby Tools Suite — Google Sheets Add-on</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Google Sans', Roboto, Arial, sans-serif; font-size: 15px; line-height: 1.8; color: #202124; background: #f8f9fa; }
 
-    body {
-      font-family: 'Google Sans', Roboto, Arial, sans-serif;
-      font-size: 15px;
-      line-height: 1.8;
-      color: #202124;
-      background: #f8f9fa;
-    }
+    header { background: linear-gradient(135deg, #1565C0, #1E88E5); color: #fff; padding: 60px 24px 48px; text-align: center; }
+    header .icon { font-size: 48px; margin-bottom: 12px; }
+    header h1 { font-size: 32px; font-weight: 700; letter-spacing: -.5px; }
+    header p { margin-top: 10px; font-size: 16px; opacity: .9; max-width: 560px; margin-left: auto; margin-right: auto; }
 
-    header {
-      background: #1565C0;
-      color: #fff;
-      padding: 36px 0 28px;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 26px;
-      font-weight: 700;
-      letter-spacing: -.3px;
-    }
-    header p {
-      margin-top: 6px;
-      font-size: 13px;
-      opacity: .85;
-    }
+    main { max-width: 780px; margin: 40px auto; padding: 0 24px 60px; }
 
-    main {
-      max-width: 760px;
-      margin: 40px auto;
-      padding: 0 24px 60px;
-    }
-
-    .card {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 1px 6px rgba(0,0,0,.1);
-      padding: 28px 32px;
-      margin-bottom: 24px;
-    }
-
-    h2 {
-      font-size: 17px;
-      font-weight: 700;
-      color: #1565C0;
-      margin-bottom: 12px;
-      padding-bottom: 8px;
-      border-bottom: 2px solid #e8f0fe;
-    }
-
+    .card { background: #fff; border-radius: 12px; box-shadow: 0 1px 6px rgba(0,0,0,.1); padding: 28px 32px; margin-bottom: 24px; }
+    h2 { font-size: 18px; font-weight: 700; color: #1565C0; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 2px solid #e8f0fe; }
     p { margin-bottom: 12px; }
     p:last-child { margin-bottom: 0; }
-
-    ul {
-      margin: 8px 0 12px 20px;
-    }
+    ul { margin: 8px 0 12px 20px; }
     ul li { margin-bottom: 6px; }
 
-    .tag {
-      display: inline-block;
-      background: #e8f0fe;
-      color: #1565C0;
-      font-size: 11.5px;
-      font-weight: 700;
-      padding: 2px 8px;
-      border-radius: 20px;
-      margin-right: 4px;
-      vertical-align: middle;
-    }
+    .tools { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; margin-top: 8px; }
+    .tool { background: #f0f4ff; border-radius: 10px; padding: 20px; border-left: 4px solid #1565C0; }
+    .tool .emoji { font-size: 24px; margin-bottom: 8px; }
+    .tool h3 { font-size: 14px; font-weight: 700; color: #1565C0; margin-bottom: 6px; }
+    .tool p { font-size: 13px; color: #3c4043; margin: 0; line-height: 1.5; }
 
-    .highlight-box {
-      background: #e6f4ea;
-      border-left: 4px solid #137333;
-      border-radius: 6px;
-      padding: 14px 18px;
-      margin: 14px 0;
-      font-size: 14px;
-      color: #137333;
-    }
+    .install-btn { display: inline-block; background: linear-gradient(135deg, #1565C0, #1E88E5); color: #fff; font-size: 15px; font-weight: 700; padding: 14px 32px; border-radius: 8px; text-decoration: none; margin-top: 8px; }
+    .install-btn:hover { opacity: .9; }
 
-    .scope-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 13.5px;
-      margin-top: 10px;
-    }
-    .scope-table th {
-      background: #f1f3f4;
-      padding: 8px 12px;
-      text-align: left;
-      font-weight: 700;
-      color: #3c4043;
-    }
-    .scope-table td {
-      padding: 8px 12px;
-      border-bottom: 1px solid #f1f3f4;
-      vertical-align: top;
-    }
-    .scope-table tr:last-child td { border-bottom: none; }
-    .scope-table code {
-      font-family: 'Roboto Mono', monospace;
-      font-size: 11.5px;
-      background: #f1f3f4;
-      padding: 1px 5px;
-      border-radius: 4px;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 12px;
-      color: #80868b;
-      padding: 24px;
-    }
+    footer { text-align: center; font-size: 12px; color: #80868b; padding: 24px; border-top: 1px solid #e8eaed; margin-top: 20px; }
     footer a { color: #1565C0; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
 
 <header>
+  <div class="icon">🛠️</div>
   <h1>Abby Tools Suite</h1>
-  <p>Privacy Policy &nbsp;·&nbsp; Last updated: May 2026</p>
+  <p>A Google Sheets add-on for cross-sheet lookups, data comparison, and Doc-to-Sheet consolidation — no coding required.</p>
 </header>
 
 <main>
 
   <div class="card">
-    <h2>1. Overview</h2>
+    <h2>What is Abby Tools Suite?</h2>
     <p>
-      Abby Tools Suite ("the Add-on") is a Google Sheets add-on that helps users perform
-      cross-sheet lookups, compare and highlight data between sheets, and consolidate
-      rows from Google Docs into Google Sheets.
+      Abby Tools Suite is a Google Workspace add-on that brings three powerful data productivity
+      tools into Google Sheets through a clean, sidebar-based interface. It is designed for
+      teams that work with large datasets and need reliable, repeatable workflows without
+      writing formulas or scripts.
     </p>
-    <div class="highlight-box">
-      ✅ This add-on does <strong>not</strong> collect, store, transmit, or share any
-      personal data outside of your own Google account. All processing happens entirely
-      within your Google Workspace session.
+    <p>
+      All tools are configured through a tabbed sidebar. Settings are saved to your account
+      and reloaded automatically each time you open the sidebar. No technical knowledge required.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Features</h2>
+    <div class="tools">
+      <div class="tool">
+        <div class="emoji">⚙️</div>
+        <h3>XLOOKUP</h3>
+        <p>Cross-sheet lookup with multi-column keys, external file support, highlight on change, and summary reports.</p>
+      </div>
+      <div class="tool">
+        <div class="emoji">🖍️</div>
+        <h3>Highlighter</h3>
+        <p>Compare two sheets and color-code rows by matches or unique values. Also detects duplicates within a single sheet.</p>
+      </div>
+      <div class="tool">
+        <div class="emoji">📄</div>
+        <h3>Doc→Sheet</h3>
+        <p>Pull rows from a Google Doc table into a Sheet. Matches IDs, tags processed rows, and highlights unmatched entries.</p>
+      </div>
     </div>
   </div>
 
   <div class="card">
-    <h2>2. What Data the Add-on Accesses</h2>
+    <h2>Privacy</h2>
     <p>
-      The add-on reads and writes only the Google Sheets and Google Docs files that
-      <strong>you explicitly select</strong> while using the tool. It never accesses
-      files you have not opened or configured through the sidebar.
+      Abby Tools Suite does <strong>not</strong> collect, store, transmit, or share any personal data.
+      All processing happens entirely within your Google account. No data is sent to any
+      external server.
     </p>
-    <p>The add-on accesses the following:</p>
-    <ul>
-      <li><strong>Google Sheets data</strong> — to read source rows, write lookup results,
-          apply highlighting, and write summary reports, all within files you choose.</li>
-      <li><strong>Google Docs data</strong> — to read table rows from a document you
-          specify, for the Doc→Sheet consolidation feature only.</li>
-      <li><strong>Sidebar UI</strong> — to display the configuration panel inside
-          Google Sheets.</li>
-      <li><strong>User email (read-only)</strong> — used solely to scope saved
-          configuration preferences to your account via
-          <code>PropertiesService.getUserProperties()</code>. The email itself is
-          never read, transmitted, or stored by the add-on.</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h2>3. Google API Scopes Used</h2>
-    <table class="scope-table">
-      <thead>
-        <tr>
-          <th>Scope</th>
-          <th>Why it is needed</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>auth/spreadsheets</code></td>
-          <td>Read source data, write lookup results, apply cell highlights, and
-              create summary sheets in Google Sheets files you configure.</td>
-        </tr>
-        <tr>
-          <td><code>auth/documents</code></td>
-          <td>Read tables from a Google Doc you specify in the Doc→Sheet tool.
-              The add-on only opens documents whose ID you provide.</td>
-        </tr>
-        <tr>
-          <td><code>auth/script.container.ui</code></td>
-          <td>Display the sidebar configuration panel inside Google Sheets.</td>
-        </tr>
-        <tr>
-          <td><code>auth/userinfo.email</code></td>
-          <td>Scope user preferences (saved config) to your account so settings
-              persist across sessions. Your email address is not read or stored.</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="card">
-    <h2>4. Data Storage</h2>
     <p>
-      The add-on saves your configuration settings (sheet names, column mappings,
-      and toggle preferences) using Google Apps Script's
-      <code>PropertiesService.getUserProperties()</code>. This storage:
-    </p>
-    <ul>
-      <li>Is scoped to your Google account only.</li>
-      <li>Is stored within Google's infrastructure — not on any third-party server.</li>
-      <li>Contains no personally identifiable information — only the field names and
-          options you chose in the sidebar.</li>
-      <li>Can be cleared at any time by clicking "↺ Reset to Defaults" in the sidebar.</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h2>5. Data Sharing</h2>
-    <p>
-      The add-on does <strong>not</strong>:
-    </p>
-    <ul>
-      <li>Send any data to external servers or third-party services.</li>
-      <li>Use analytics, tracking, or advertising services.</li>
-      <li>Share your spreadsheet or document data with anyone, including the developer.</li>
-      <li>Log, monitor, or retain any content from your files.</li>
-    </ul>
-    <p>
-      All computation is performed locally within your Google account's Apps Script
-      execution environment.
+      For full details on data access and storage, please read our
+      <a href="/abby-tools-suite/privacy">Privacy Policy</a>.
     </p>
   </div>
 
-  <div class="card">
-    <h2>6. Third-Party Services</h2>
-    <p>
-      This add-on does not integrate with or transmit data to any third-party
-      service. It operates exclusively through official Google Workspace APIs.
-    </p>
-  </div>
-
-  <div class="card">
-    <h2>7. Children's Privacy</h2>
-    <p>
-      This add-on is a productivity tool intended for use by adults in professional
-      or organizational settings. It does not knowingly collect data from or target
-      children under the age of 13.
-    </p>
-  </div>
-
-  <div class="card">
-    <h2>8. Changes to This Policy</h2>
-    <p>
-      If this privacy policy is updated, the "Last updated" date at the top of
-      this page will reflect the change. Continued use of the add-on after any
-      change constitutes acceptance of the updated policy.
-    </p>
-  </div>
-
-  <div class="card">
-    <h2>9. Contact</h2>
-    <p>
-      If you have questions about this privacy policy or how the add-on handles
-      data, please contact:
-    </p>
-    <ul>
-      <li><strong>Developer:</strong> [YOUR NAME]</li>
-      <li><strong>Email:</strong> [YOUR EMAIL ADDRESS]</li>
-      <li><strong>Organization:</strong> [YOUR ORGANIZATION — e.g., DSWD Region IV-A / CPOO]</li>
-    </ul>
-    <p style="margin-top:14px;font-size:13px;color:#80868b;">
-      Replace the bracketed fields above with your actual contact details before
-      publishing this page.
-    </p>
+  <div class="card" style="text-align:center">
+    <h2>Install</h2>
+    <p>Available on the Google Workspace Marketplace.</p>
+    <a class="install-btn" href="https://workspace.google.com/marketplace" target="_blank">
+      Install from Marketplace
+    </a>
   </div>
 
 </main>
 
 <footer>
-  <p>Sheet Tools Suite &nbsp;·&nbsp; v9.0 &nbsp;·&nbsp;
-    <a href="https://workspace.google.com/marketplace" target="_blank">
-      Google Workspace Marketplace
-    </a>
+  <p>
+    Abby Tools Suite &nbsp;·&nbsp; v9.0 &nbsp;·&nbsp;
+    <a href="/abby-tools-suite/privacy">Privacy Policy</a>
   </p>
 </footer>
 
