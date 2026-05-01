@@ -1,115 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abby Tools Suite — Google Sheets Add-on</title>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Google Sans', Roboto, Arial, sans-serif; font-size: 15px; line-height: 1.8; color: #202124; background: #f8f9fa; }
-
-    header { background: linear-gradient(135deg, #1565C0, #1E88E5); color: #fff; padding: 60px 24px 48px; text-align: center; }
-    header .icon { font-size: 48px; margin-bottom: 12px; }
-    header h1 { font-size: 32px; font-weight: 700; letter-spacing: -.5px; }
-    header p { margin-top: 10px; font-size: 16px; opacity: .9; max-width: 560px; margin-left: auto; margin-right: auto; }
-
-    main { max-width: 780px; margin: 40px auto; padding: 0 24px 60px; }
-
-    .card { background: #fff; border-radius: 12px; box-shadow: 0 1px 6px rgba(0,0,0,.1); padding: 28px 32px; margin-bottom: 24px; }
-    h2 { font-size: 18px; font-weight: 700; color: #1565C0; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 2px solid #e8f0fe; }
-    p { margin-bottom: 12px; }
-    p:last-child { margin-bottom: 0; }
-    ul { margin: 8px 0 12px 20px; }
-    ul li { margin-bottom: 6px; }
-
-    .tools { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; margin-top: 8px; }
-    .tool { background: #f0f4ff; border-radius: 10px; padding: 20px; border-left: 4px solid #1565C0; }
-    .tool .emoji { font-size: 24px; margin-bottom: 8px; }
-    .tool h3 { font-size: 14px; font-weight: 700; color: #1565C0; margin-bottom: 6px; }
-    .tool p { font-size: 13px; color: #3c4043; margin: 0; line-height: 1.5; }
-
-    .install-btn { display: inline-block; background: linear-gradient(135deg, #1565C0, #1E88E5); color: #fff; font-size: 15px; font-weight: 700; padding: 14px 32px; border-radius: 8px; text-decoration: none; margin-top: 8px; }
-    .install-btn:hover { opacity: .9; }
-
-    footer { text-align: center; font-size: 12px; color: #80868b; padding: 24px; border-top: 1px solid #e8eaed; margin-top: 20px; }
-    footer a { color: #1565C0; text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
-  </style>
+<meta charset="UTF-8">
+<title>Abby Tools Suite</title>
 </head>
 <body>
-
-<header>
-  <div class="icon">🛠️</div>
-  <h1>Abby Tools Suite</h1>
-  <p>A Google Sheets add-on for cross-sheet lookups, data comparison, and Doc-to-Sheet consolidation — no coding required.</p>
-</header>
-
-<main>
-
-  <div class="card">
-    <h2>What is Abby Tools Suite?</h2>
-    <p>
-      Abby Tools Suite is a Google Workspace add-on that brings three powerful data productivity
-      tools into Google Sheets through a clean, sidebar-based interface. It is designed for
-      teams that work with large datasets and need reliable, repeatable workflows without
-      writing formulas or scripts.
-    </p>
-    <p>
-      All tools are configured through a tabbed sidebar. Settings are saved to your account
-      and reloaded automatically each time you open the sidebar. No technical knowledge required.
-    </p>
-  </div>
-
-  <div class="card">
-    <h2>Features</h2>
-    <div class="tools">
-      <div class="tool">
-        <div class="emoji">⚙️</div>
-        <h3>XLOOKUP</h3>
-        <p>Cross-sheet lookup with multi-column keys, external file support, highlight on change, and summary reports.</p>
-      </div>
-      <div class="tool">
-        <div class="emoji">🖍️</div>
-        <h3>Highlighter</h3>
-        <p>Compare two sheets and color-code rows by matches or unique values. Also detects duplicates within a single sheet.</p>
-      </div>
-      <div class="tool">
-        <div class="emoji">📄</div>
-        <h3>Doc→Sheet</h3>
-        <p>Pull rows from a Google Doc table into a Sheet. Matches IDs, tags processed rows, and highlights unmatched entries.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <h2>Privacy</h2>
-    <p>
-      Abby Tools Suite does <strong>not</strong> collect, store, transmit, or share any personal data.
-      All processing happens entirely within your Google account. No data is sent to any
-      external server.
-    </p>
-    <p>
-      For full details on data access and storage, please read our
-      <a href="/abby-tools-suite/privacy">Privacy Policy</a>.
-    </p>
-  </div>
-
-  <div class="card" style="text-align:center">
-    <h2>Install</h2>
-    <p>Available on the Google Workspace Marketplace.</p>
-    <a class="install-btn" href="https://workspace.google.com/marketplace" target="_blank">
-      Install from Marketplace
-    </a>
-  </div>
-
-</main>
-
-<footer>
-  <p>
-    Abby Tools Suite &nbsp;·&nbsp; v9.0 &nbsp;·&nbsp;
-    <a href="/abby-tools-suite/privacy">Privacy Policy</a>
-  </p>
-</footer>
-
+<h1>Abby Tools Suite</h1>
+<p>A Google Sheets add-on for cross-sheet XLOOKUP, duplicate highlighting, and Google Doc-to-Sheet consolidation.</p>
+<p>No coding required. All tools are configured through a sidebar inside Google Sheets.</p>
+<h2>Features</h2>
+<ul>
+<li>XLOOKUP — match and copy data across sheets or files</li>
+<li>Highlighter — compare sheets and color matches or unique rows</li>
+<li>Doc to Sheet — pull rows from a Google Doc table into a Sheet</li>
+</ul>
+<p><a href="https://micurioso.github.io/abby-tools-suite/privacy">Privacy Policy</a></p>
 </body>
 </html>
